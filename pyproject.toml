@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reaction-kinetics"
+version = "0.1.0"
+description = "Chemical kinetics: rate laws, Arrhenius analysis and mass-action networks"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luis Rodriguez" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "jupyter"]
+
+[tool.setuptools]
+packages = ["kinetix"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
